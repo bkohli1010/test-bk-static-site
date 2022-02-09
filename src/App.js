@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Suspense, lazy} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from "./Components/core/Home/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import ColorTabs from "./Components/UI/Tabs/ColorTabs";
+
+
+const LazyVehicles = lazy(() => import('./Components/core/Vehicles/Vehicles'))
+const LazyCharging = lazy(() => import('./Components/core/Charging/Charging'))
+
+const App = () => {
+    return (
+        <Router>
+            <Suspense fallback={'Loading...'}>
+                <ColorTabs className="color-tabs-box"/>
+                <Routes>
+                    <Route path="/vehicles" exact element={<LazyVehicles />} />
+                    <Route path="/charging" exact element={<LazyCharging />} />
+                </Routes>
+            </Suspense>
+        </Router>
+    );
 }
 
 export default App;
