@@ -1,6 +1,5 @@
 import React, {Suspense, lazy} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from "./Components/core/Home/Home";
 
 import './App.css';
 import ColorTabs from "./Components/UI/Tabs/ColorTabs";
