@@ -1,6 +1,7 @@
 {
   "name": "search-locate-service",
   "version": "0.1.0",
+  "homepage": "https://bkohli1010.github.io/test-bk-static-site",
   "type": "module",
   "private": true,
   "dependencies": {
@@ -11,13 +12,16 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "netlify-cli": "^9.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "https://search-locate.generalsandbox.avmobility.io/",
+  "proxy": "https://bkohli1010.github.io/test-bk-static-site",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && compress-cra",
     "test": "react-scripts test",
@@ -45,6 +49,7 @@
   "devDependencies": {
     "@material-ui/core": "^4.12.3",
     "compress-create-react-app": "^1.2.1",
+    "gh-pages": "^3.2.3",
     "jest-each": "^27.2.2",
     "jest-stare": "^2.3.0",
     "react-router-dom": "^6.2.1"
