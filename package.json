@@ -1,28 +1,21 @@
 {
-  "name": "search-locate-service",
+  "name": "react-complete-guide",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
-    "@avllc/cxc-components-web": "^1.15.4",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/material": "^5.4.0",
-    "@testing-library/jest-dom": "^5.15.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
-  "proxy": "https://search-locate.generalsandbox.avmobility.io/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && compress-cra",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "test:once": "react-scripts test --coverage --watchAll=false --maxWorkers=4 --testResultsProcessor=jest-stare"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,36 +33,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@material-ui/core": "^4.12.3",
-    "compress-create-react-app": "^1.2.1",
-    "jest-each": "^27.2.2",
-    "jest-stare": "^2.3.0",
-    "react-router-dom": "^6.2.1"
-  },
-  "jest-stare": {
-    "resultDir": "testResults",
-    "reportTitle": "Test Results",
-    "reportHeadline": "Test Results",
-    "coverageLink": "../coverage/test-result-report/index.html"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{js,jsx,ts,tsx}",
-      "!**/index.ts",
-      "!**/Navbar/**/*.ts",
-      "!src/*.{ts,tsx}",
-      "!src/types/*.{js,jsx,ts,tsx}",
-      "!**/node_modules/**",
-      "!**/coverage/**",
-      "!**/serviceWorker.js",
-      "!**/index.js",
-      "!**/FDS_SX/**"
-    ],
-    "testMatch": [
-      "**/?(*.)+(spec|test).[jt]s?(x)"
     ]
   }
 }
